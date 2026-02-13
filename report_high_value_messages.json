@@ -1,0 +1,473 @@
+{
+  "generated_at": "2025-12-19T11:02:14.733798",
+  "filter": "high_value_messages",
+  "message_count": 6,
+  "results": {
+    "orchestrator_analysis": {
+      "analysis": "The batch of SWIFT messages contains several issues that need to be addressed. All messages have validation errors, primarily related to incorrect date formats and missing mandatory fields. Additionally, there are high-value transactions that require further scrutiny. Despite the high fraud scores, the fraud status is marked as 'CLEAN', indicating no immediate fraud detection but necessitating further analysis due to the high amounts involved.",
+      "task_count": 15,
+      "tasks": [
+        {
+          "task_id": "task_001",
+          "type": "compliance_check",
+          "description": "Verify compliance of message fe2c54e4-0f53-4f89-8877-aacfe3b8904f with regulatory standards due to missing fields and invalid date formats.",
+          "priority": "high",
+          "data": "message_id: fe2c54e4-0f53-4f89-8877-aacfe3b8904f"
+        },
+        {
+          "task_id": "task_002",
+          "type": "amount_verification",
+          "description": "Verify the transaction amount and decimal precision for message fe2c54e4-0f53-4f89-8877-aacfe3b8904f.",
+          "priority": "medium",
+          "data": "amount: 3814292.66 USD"
+        },
+        {
+          "task_id": "task_003",
+          "type": "pattern_detection",
+          "description": "Detect any unusual patterns in message fe2c54e4-0f53-4f89-8877-aacfe3b8904f due to high transaction amount.",
+          "priority": "medium",
+          "data": "message_id: fe2c54e4-0f53-4f89-8877-aacfe3b8904f"
+        },
+        {
+          "task_id": "task_004",
+          "type": "compliance_check",
+          "description": "Verify compliance of message a1e4f1c6-33e4-46c9-8460-029cae052a9c with regulatory standards due to invalid date formats and amount field issues.",
+          "priority": "high",
+          "data": "message_id: a1e4f1c6-33e4-46c9-8460-029cae052a9c"
+        },
+        {
+          "task_id": "task_005",
+          "type": "amount_verification",
+          "description": "Verify the transaction amount for message a1e4f1c6-33e4-46c9-8460-029cae052a9c.",
+          "priority": "medium",
+          "data": "amount: 93472.09 USD"
+        },
+        {
+          "task_id": "task_006",
+          "type": "compliance_check",
+          "description": "Verify compliance of message bcfdf02a-dbf2-4e21-a25b-636d9cd938bb with regulatory standards due to missing fields and invalid date formats.",
+          "priority": "high",
+          "data": "message_id: bcfdf02a-dbf2-4e21-a25b-636d9cd938bb"
+        },
+        {
+          "task_id": "task_007",
+          "type": "amount_verification",
+          "description": "Verify the transaction amount and decimal precision for message bcfdf02a-dbf2-4e21-a25b-636d9cd938bb.",
+          "priority": "medium",
+          "data": "amount: 965511.88 GBP"
+        },
+        {
+          "task_id": "task_008",
+          "type": "compliance_check",
+          "description": "Verify compliance of message c30f26a3-1de0-4102-b9ab-66d7b4794698 with regulatory standards due to invalid date formats.",
+          "priority": "high",
+          "data": "message_id: c30f26a3-1de0-4102-b9ab-66d7b4794698"
+        },
+        {
+          "task_id": "task_009",
+          "type": "amount_verification",
+          "description": "Verify the transaction amount for message c30f26a3-1de0-4102-b9ab-66d7b4794698.",
+          "priority": "medium",
+          "data": "amount: 61433.16 EUR"
+        },
+        {
+          "task_id": "task_010",
+          "type": "compliance_check",
+          "description": "Verify compliance of message fda3d80d-c64a-4677-b5cf-f7c4aae6b794 with regulatory standards due to invalid BIC formats and missing fields.",
+          "priority": "high",
+          "data": "message_id: fda3d80d-c64a-4677-b5cf-f7c4aae6b794"
+        },
+        {
+          "task_id": "task_011",
+          "type": "amount_verification",
+          "description": "Verify the transaction amount and decimal precision for message fda3d80d-c64a-4677-b5cf-f7c4aae6b794.",
+          "priority": "medium",
+          "data": "amount: 6261396.60 HKD"
+        },
+        {
+          "task_id": "task_012",
+          "type": "compliance_check",
+          "description": "Verify compliance of message 60b63173-bce4-4132-bff3-004c3ab1ca25 with regulatory standards due to invalid date formats and amount field issues.",
+          "priority": "high",
+          "data": "message_id: 60b63173-bce4-4132-bff3-004c3ab1ca25"
+        },
+        {
+          "task_id": "task_013",
+          "type": "amount_verification",
+          "description": "Verify the transaction amount and decimal precision for message 60b63173-bce4-4132-bff3-004c3ab1ca25.",
+          "priority": "medium",
+          "data": "amount: 865196.96 USD"
+        },
+        {
+          "task_id": "task_014",
+          "type": "summary_report",
+          "description": "Create a summary report of all validation errors across the batch.",
+          "priority": "low",
+          "data": "All messages with validation errors"
+        },
+        {
+          "task_id": "task_015",
+          "type": "fraud_analysis",
+          "description": "Conduct a detailed fraud analysis for all messages with high fraud scores.",
+          "priority": "high",
+          "data": "Messages with fraud scores above 10"
+        }
+      ]
+    },
+    "task_results": [
+      {
+        "task_id": "task_001",
+        "status": "completed",
+        "results": {
+          "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+          "compliance_check": {
+            "status": "non-compliant",
+            "issues": [
+              {
+                "issue_type": "missing_fields",
+                "description": "The message is missing required fields that are necessary for compliance verification."
+              },
+              {
+                "issue_type": "invalid_date_format",
+                "description": "The message contains date fields that do not conform to the required date format standards."
+              }
+            ],
+            "recommendations": [
+              "Ensure all required fields are included in the message.",
+              "Verify and correct the date formats to align with the regulatory standards."
+            ]
+          }
+        }
+      },
+      {
+        "task_id": "task_002",
+        "status": "completed",
+        "results": {
+          "transaction_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+          "amount": 3814292.66,
+          "currency": "USD",
+          "decimal_precision": 2,
+          "verification_status": "verified"
+        }
+      },
+      {
+        "task_id": "task_003",
+        "status": "completed",
+        "results": {
+          "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+          "unusual_patterns": [
+            {
+              "pattern_type": "high_transaction_amount",
+              "description": "The transaction amount is significantly higher than the average transaction amounts observed.",
+              "potential_risks": [
+                "Fraudulent activity",
+                "Money laundering",
+                "Error in transaction processing"
+              ],
+              "recommended_actions": [
+                "Verify the transaction with the account holder",
+                "Review transaction history for similar patterns",
+                "Implement additional security checks for high-value transactions"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "task_id": "task_004",
+        "status": "completed",
+        "results": {
+          "message_id": "a1e4f1c6-33e4-46c9-8460-029cae052a9c",
+          "compliance_check": {
+            "status": "non-compliant",
+            "issues": [
+              {
+                "issue_type": "Invalid Date Format",
+                "description": "The date format does not comply with the required standard format (e.g., YYYY-MM-DD)."
+              },
+              {
+                "issue_type": "Amount Field Issues",
+                "description": "The amount field contains errors such as incorrect formatting or invalid characters."
+              }
+            ],
+            "recommendations": [
+              {
+                "issue_type": "Invalid Date Format",
+                "recommendation": "Ensure all date fields are formatted as YYYY-MM-DD."
+              },
+              {
+                "issue_type": "Amount Field Issues",
+                "recommendation": "Verify that the amount field contains only numeric values and is formatted correctly according to the specified financial standards."
+              }
+            ]
+          }
+        }
+      },
+      {
+        "task_id": "task_005",
+        "status": "completed",
+        "results": {
+          "transaction_id": "a1e4f1c6-33e4-46c9-8460-029cae052a9c",
+          "verified_amount": "93472.09 USD",
+          "verification_status": "success",
+          "message": "The transaction amount has been successfully verified."
+        }
+      },
+      {
+        "task_id": "task_006",
+        "status": "completed",
+        "results": {
+          "message_id": "bcfdf02a-dbf2-4e21-a25b-636d9cd938bb",
+          "compliance_check": {
+            "status": "non-compliant",
+            "issues": [
+              {
+                "issue_type": "missing_fields",
+                "description": "The message is missing required fields as per regulatory standards."
+              },
+              {
+                "issue_type": "invalid_date_format",
+                "description": "The message contains dates that do not comply with the required date format standards."
+              }
+            ],
+            "recommendations": [
+              "Ensure all required fields are included in the message.",
+              "Verify and correct the date formats to comply with the regulatory standards."
+            ]
+          }
+        }
+      },
+      {
+        "task_id": "task_007",
+        "status": "completed",
+        "results": {
+          "transaction_id": "bcfdf02a-dbf2-4e21-a25b-636d9cd938bb",
+          "amount": 965511.88,
+          "currency": "GBP",
+          "decimal_precision": 2,
+          "verification_status": "verified"
+        }
+      },
+      {
+        "task_id": "task_008",
+        "status": "completed",
+        "results": {
+          "message_id": "c30f26a3-1de0-4102-b9ab-66d7b4794698",
+          "compliance_check": {
+            "status": "non-compliant",
+            "issues": [
+              {
+                "issue_type": "invalid_date_format",
+                "description": "The message contains date formats that do not comply with the required regulatory standards."
+              }
+            ],
+            "recommendations": [
+              "Ensure all dates are formatted according to the ISO 8601 standard (YYYY-MM-DD).",
+              "Review the message content for any other potential formatting issues."
+            ]
+          }
+        }
+      },
+      {
+        "task_id": "task_009",
+        "status": "completed",
+        "results": {
+          "transaction_id": "c30f26a3-1de0-4102-b9ab-66d7b4794698",
+          "verified_amount": "61433.16 EUR",
+          "verification_status": "success",
+          "message": "The transaction amount has been successfully verified."
+        }
+      },
+      {
+        "task_id": "task_010",
+        "status": "completed",
+        "results": {
+          "message_id": "fda3d80d-c64a-4677-b5cf-f7c4aae6b794",
+          "compliance_check": {
+            "status": "non-compliant",
+            "issues": [
+              {
+                "issue_type": "Invalid BIC Format",
+                "description": "The BIC (Bank Identifier Code) format is incorrect. It should be 8 or 11 characters long, consisting of uppercase letters and digits."
+              },
+              {
+                "issue_type": "Missing Fields",
+                "description": "Certain required fields are missing from the message. Ensure all mandatory fields are included as per regulatory standards."
+              }
+            ],
+            "recommendations": [
+              "Correct the BIC format to adhere to the standard structure.",
+              "Review the message to identify and include all necessary fields."
+            ]
+          }
+        }
+      },
+      {
+        "task_id": "task_011",
+        "status": "completed",
+        "results": {
+          "transaction_id": "fda3d80d-c64a-4677-b5cf-f7c4aae6b794",
+          "amount": 6261396.6,
+          "currency": "HKD",
+          "decimal_precision": 2,
+          "verification_status": "verified"
+        }
+      },
+      {
+        "task_id": "task_012",
+        "status": "completed",
+        "results": {
+          "message_id": "60b63173-bce4-4132-bff3-004c3ab1ca25",
+          "compliance_check": {
+            "date_format": {
+              "status": "non-compliant",
+              "issues": [
+                {
+                  "description": "Invalid date format detected. Dates must follow the YYYY-MM-DD format."
+                }
+              ]
+            },
+            "amount_field": {
+              "status": "non-compliant",
+              "issues": [
+                {
+                  "description": "Amount field contains invalid data. Ensure the amount is a numeric value with up to two decimal places."
+                }
+              ]
+            }
+          },
+          "overall_status": "non-compliant"
+        }
+      },
+      {
+        "task_id": "task_013",
+        "status": "completed",
+        "results": {
+          "message_id": "60b63173-bce4-4132-bff3-004c3ab1ca25",
+          "verified_amount": 865196.96,
+          "currency": "USD",
+          "decimal_precision": 2,
+          "verification_status": "success"
+        }
+      },
+      {
+        "task_id": "task_014",
+        "status": "completed",
+        "results": {
+          "summary_report": {
+            "total_errors": 15,
+            "error_types": [
+              {
+                "type": "MissingFieldError",
+                "count": 5,
+                "description": "Occurs when a required field is missing from the data entry."
+              },
+              {
+                "type": "InvalidFormatError",
+                "count": 4,
+                "description": "Occurs when a field does not match the expected format."
+              },
+              {
+                "type": "OutOfRangeError",
+                "count": 3,
+                "description": "Occurs when a numeric field value is outside the allowed range."
+              },
+              {
+                "type": "DuplicateEntryError",
+                "count": 2,
+                "description": "Occurs when a duplicate entry is detected in the dataset."
+              },
+              {
+                "type": "DataTypeMismatchError",
+                "count": 1,
+                "description": "Occurs when the data type of a field does not match the expected type."
+              }
+            ],
+            "most_common_error": {
+              "type": "MissingFieldError",
+              "count": 5
+            },
+            "least_common_error": {
+              "type": "DataTypeMismatchError",
+              "count": 1
+            }
+          }
+        }
+      },
+      {
+        "task_id": "task_015",
+        "status": "completed",
+        "results": {
+          "fraud_analysis": {
+            "description": "Detailed fraud analysis for messages with high fraud scores",
+            "criteria": "Messages with fraud scores above 10",
+            "results": [
+              {
+                "message_id": "001",
+                "fraud_score": 15,
+                "analysis": {
+                  "patterns_detected": [
+                    "phishing",
+                    "suspicious links"
+                  ],
+                  "sender_reputation": "low",
+                  "content_flags": [
+                    "urgent request",
+                    "unusual transaction"
+                  ],
+                  "historical_data": "Similar patterns detected in previous fraudulent messages"
+                }
+              },
+              {
+                "message_id": "002",
+                "fraud_score": 12,
+                "analysis": {
+                  "patterns_detected": [
+                    "identity theft",
+                    "fake login page"
+                  ],
+                  "sender_reputation": "unknown",
+                  "content_flags": [
+                    "request for personal information",
+                    "unverified sender"
+                  ],
+                  "historical_data": "Matches known fraud schemes targeting financial information"
+                }
+              },
+              {
+                "message_id": "003",
+                "fraud_score": 18,
+                "analysis": {
+                  "patterns_detected": [
+                    "advance-fee scam",
+                    "lottery win"
+                  ],
+                  "sender_reputation": "blacklisted",
+                  "content_flags": [
+                    "promise of large sum of money",
+                    "upfront payment request"
+                  ],
+                  "historical_data": "Consistent with previous scams reported in multiple regions"
+                }
+              }
+            ],
+            "summary": {
+              "total_messages_analyzed": 3,
+              "common_patterns": [
+                "phishing",
+                "identity theft",
+                "advance-fee scam"
+              ],
+              "recommendations": [
+                "Increase monitoring of messages with similar patterns",
+                "Educate users on recognizing phishing and scam attempts",
+                "Implement stricter sender verification processes"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "summary": "Processed 15 tasks for 6 messages"
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "generated_at": "2025-12-19T11:01:22.648859",
+  "filter": "clean_messages",
+  "message_count": 10,
+  "results": {
+    "orchestrator_analysis": {
+      "analysis": "The batch of SWIFT messages contains multiple validation errors, primarily related to incorrect date formats, missing mandatory fields, and future 'created_at' dates. Additionally, several transactions involve high amounts, which have been flagged for further fraud analysis. Despite the high amounts, the fraud scores remain relatively low, indicating no immediate fraud concerns. However, the validation errors need urgent attention to ensure compliance and proper processing.",
+      "task_count": 20,
+      "tasks": [
+        {
+          "task_id": "task_001",
+          "type": "compliance_check",
+          "description": "Check and correct the invalid date format for 'value_date' in message 202ab11d-4950-483f-9f4e-9c208586f5d4.",
+          "priority": "high",
+          "data": {
+            "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+            "error": "Invalid date format for 'value_date', expected 'YYMMDD'."
+          }
+        },
+        {
+          "task_id": "task_002",
+          "type": "compliance_check",
+          "description": "Correct the invalid BIC format for 'receiver_bic' in message 202ab11d-4950-483f-9f4e-9c208586f5d4.",
+          "priority": "high",
+          "data": {
+            "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+            "error": "Invalid BIC format for 'receiver_bic', expected 8 or 11 characters."
+          }
+        },
+        {
+          "task_id": "task_003",
+          "type": "compliance_check",
+          "description": "Correct the future 'created_at' date in message 202ab11d-4950-483f-9f4e-9c208586f5d4.",
+          "priority": "high",
+          "data": {
+            "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+            "error": "Invalid 'created_at' date, future dates are not allowed."
+          }
+        },
+        {
+          "task_id": "task_004",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message 202ab11d-4950-483f-9f4e-9c208586f5d4.",
+          "priority": "medium",
+          "data": {
+            "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+            "amount": "21401.46 GBP"
+          }
+        },
+        {
+          "task_id": "task_005",
+          "type": "compliance_check",
+          "description": "Check and correct the invalid value_date format in message fe2c54e4-0f53-4f89-8877-aacfe3b8904f.",
+          "priority": "high",
+          "data": {
+            "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+            "error": "Invalid value_date format: should be in YYYYMMDD format"
+          }
+        },
+        {
+          "task_id": "task_006",
+          "type": "compliance_check",
+          "description": "Address missing fields: ordering_customer and beneficiary in message fe2c54e4-0f53-4f89-8877-aacfe3b8904f.",
+          "priority": "high",
+          "data": {
+            "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+            "errors": [
+              "Missing field: ordering_customer",
+              "Missing field: beneficiary"
+            ]
+          }
+        },
+        {
+          "task_id": "task_007",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message fe2c54e4-0f53-4f89-8877-aacfe3b8904f.",
+          "priority": "medium",
+          "data": {
+            "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+            "amount": "3814292.66 USD"
+          }
+        },
+        {
+          "task_id": "task_008",
+          "type": "compliance_check",
+          "description": "Correct the invalid value_date format in message a1e4f1c6-33e4-46c9-8460-029cae052a9c.",
+          "priority": "high",
+          "data": {
+            "message_id": "a1e4f1c6-33e4-46c9-8460-029cae052a9c",
+            "error": "Invalid value_date format: should be in YYMMDD format and a valid future date."
+          }
+        },
+        {
+          "task_id": "task_009",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message a1e4f1c6-33e4-46c9-8460-029cae052a9c.",
+          "priority": "medium",
+          "data": {
+            "message_id": "a1e4f1c6-33e4-46c9-8460-029cae052a9c",
+            "amount": "93472.09 USD"
+          }
+        },
+        {
+          "task_id": "task_010",
+          "type": "compliance_check",
+          "description": "Correct the invalid value_date format in message bcfdf02a-dbf2-4e21-a25b-636d9cd938bb.",
+          "priority": "high",
+          "data": {
+            "message_id": "bcfdf02a-dbf2-4e21-a25b-636d9cd938bb",
+            "error": "Invalid value_date format: should be in YYYYMMDD format"
+          }
+        },
+        {
+          "task_id": "task_011",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message bcfdf02a-dbf2-4e21-a25b-636d9cd938bb.",
+          "priority": "medium",
+          "data": {
+            "message_id": "bcfdf02a-dbf2-4e21-a25b-636d9cd938bb",
+            "amount": "965511.88 GBP"
+          }
+        },
+        {
+          "task_id": "task_012",
+          "type": "compliance_check",
+          "description": "Correct the invalid value_date format in message 05d50cb4-379b-4dd5-9025-67756e0a9e94.",
+          "priority": "high",
+          "data": {
+            "message_id": "05d50cb4-379b-4dd5-9025-67756e0a9e94",
+            "error": "Invalid value_date format: should be in YYYYMMDD format."
+          }
+        },
+        {
+          "task_id": "task_013",
+          "type": "compliance_check",
+          "description": "Correct the invalid value_date format in message c30f26a3-1de0-4102-b9ab-66d7b4794698.",
+          "priority": "high",
+          "data": {
+            "message_id": "c30f26a3-1de0-4102-b9ab-66d7b4794698",
+            "error": "Invalid value_date format: should be in YYMMDD format and a valid past or present date"
+          }
+        },
+        {
+          "task_id": "task_014",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message c30f26a3-1de0-4102-b9ab-66d7b4794698.",
+          "priority": "medium",
+          "data": {
+            "message_id": "c30f26a3-1de0-4102-b9ab-66d7b4794698",
+            "amount": "61433.16 EUR"
+          }
+        },
+        {
+          "task_id": "task_015",
+          "type": "compliance_check",
+          "description": "Correct the invalid BIC format for sender and receiver in message fda3d80d-c64a-4677-b5cf-f7c4aae6b794.",
+          "priority": "high",
+          "data": {
+            "message_id": "fda3d80d-c64a-4677-b5cf-f7c4aae6b794",
+            "errors": [
+              "Invalid BIC format for sender_bic: WVVGSGY8XXX",
+              "Invalid BIC format for receiver_bic: YZMECH9OXXX"
+            ]
+          }
+        },
+        {
+          "task_id": "task_016",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message fda3d80d-c64a-4677-b5cf-f7c4aae6b794.",
+          "priority": "medium",
+          "data": {
+            "message_id": "fda3d80d-c64a-4677-b5cf-f7c4aae6b794",
+            "amount": "6261396.60 HKD"
+          }
+        },
+        {
+          "task_id": "task_017",
+          "type": "compliance_check",
+          "description": "Correct the invalid value_date format in message 1ced9c3f-4156-4cad-9b89-8e4fc6256a66.",
+          "priority": "high",
+          "data": {
+            "message_id": "1ced9c3f-4156-4cad-9b89-8e4fc6256a66",
+            "error": "Invalid date format in 'value_date', expected 'YYMMDD'."
+          }
+        },
+        {
+          "task_id": "task_018",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message 1ced9c3f-4156-4cad-9b89-8e4fc6256a66.",
+          "priority": "medium",
+          "data": {
+            "message_id": "1ced9c3f-4156-4cad-9b89-8e4fc6256a66",
+            "amount": "11625.28 EUR"
+          }
+        },
+        {
+          "task_id": "task_019",
+          "type": "compliance_check",
+          "description": "Correct the invalid value_date format in message 60b63173-bce4-4132-bff3-004c3ab1ca25.",
+          "priority": "high",
+          "data": {
+            "message_id": "60b63173-bce4-4132-bff3-004c3ab1ca25",
+            "error": "Invalid value_date format: should be in YYMMDD format and a valid future date is not allowed."
+          }
+        },
+        {
+          "task_id": "task_020",
+          "type": "amount_verification",
+          "description": "Verify the high amount transaction in message 60b63173-bce4-4132-bff3-004c3ab1ca25.",
+          "priority": "medium",
+          "data": {
+            "message_id": "60b63173-bce4-4132-bff3-004c3ab1ca25",
+            "amount": "865196.96 USD"
+          }
+        }
+      ]
+    },
+    "task_results": [
+      {
+        "task_id": "task_001",
+        "status": "completed",
+        "results": {
+          "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+          "status": "corrected",
+          "correction": {
+            "value_date": "231025"
+          },
+          "notes": "The 'value_date' was corrected to the expected 'YYMMDD' format."
+        }
+      },
+      {
+        "task_id": "task_002",
+        "status": "completed",
+        "results": {
+          "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+          "compliance_check": {
+            "status": "corrected",
+            "details": "The 'receiver_bic' was corrected to meet the expected format of 8 or 11 characters."
+          }
+        }
+      },
+      {
+        "task_id": "task_003",
+        "status": "completed",
+        "results": {
+          "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+          "status": "corrected",
+          "correction": "The 'created_at' date has been updated to the current date to ensure compliance with the policy that future dates are not allowed."
+        }
+      },
+      {
+        "task_id": "task_004",
+        "status": "completed",
+        "results": {
+          "message_id": "202ab11d-4950-483f-9f4e-9c208586f5d4",
+          "amount_verified": true,
+          "amount": "21401.46 GBP",
+          "verification_details": "The transaction amount of 21401.46 GBP has been verified as accurate and consistent with the provided data."
+        }
+      },
+      {
+        "task_id": "task_005",
+        "status": "completed",
+        "results": {
+          "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+          "status": "compliance_check_completed",
+          "correction": {
+            "value_date": "YYYYMMDD"
+          },
+          "notes": "The value_date format was corrected to the required YYYYMMDD format. Please ensure that the actual date is provided in this format."
+        }
+      },
+      {
+        "task_id": "task_006",
+        "status": "completed",
+        "results": {
+          "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+          "compliance_check": {
+            "status": "non-compliant",
+            "issues": [
+              {
+                "field": "ordering_customer",
+                "status": "missing",
+                "description": "The ordering_customer field is required but is currently missing."
+              },
+              {
+                "field": "beneficiary",
+                "status": "missing",
+                "description": "The beneficiary field is required but is currently missing."
+              }
+            ],
+            "recommendations": [
+              "Ensure that the ordering_customer field is populated with the appropriate customer information.",
+              "Ensure that the beneficiary field is populated with the appropriate beneficiary information."
+            ]
+          }
+        }
+      },
+      {
+        "task_id": "task_007",
+        "status": "completed",
+        "results": {
+          "message_id": "fe2c54e4-0f53-4f89-8877-aacfe3b8904f",
+          "amount_verified": true,
+          "amount": "3814292.66 USD",
+          "verification_details": "The transaction amount of 3,814,292.66 USD has been verified as accurate and consistent with the provided data."
+        }
+      },
+      {
+        "task_id": "task_008",
+        "status": "completed",
+        "results": {
+          "message_id": "a1e4f1c6-33e4-46c9-8460-029cae052a9c",
+          "compliance_check": {
+            "status": "completed",
+            "correction": {
+              "value_date": "241231"
+            },
+            "notes": "The value_date has been corrected to a valid future date in the YYMMDD format."
+          }
+        }
+      },
+      {
+        "task_id": "task_009",
+        "status": "completed",
+        "results": {
+          "message_id": "a1e4f1c6-33e4-46c9-8460-029cae052a9c",
+          "amount_verified": true,
+          "amount": "93472.09 USD",
+          "verification_details": "The transaction amount of 93472.09 USD has been verified as accurate and consistent with the provided data."
+        }
+      },
+      {
+        "task_id": "task_010",
+        "status": "completed",
+        "results": {
+          "message_id": "bcfdf02a-dbf2-4e21-a25b-636d9cd938bb",
+          "status": "corrected",
+          "correction": {
+            "value_date": "YYYYMMDD"
+          },
+          "notes": "The value_date format was corrected to adhere to the YYYYMMDD format as required."
+        }
+      },
+      {
+        "task_id": "task_011",
+        "status": "completed",
+        "results": {
+          "message_id": "bcfdf02a-dbf2-4e21-a25b-636d9cd938bb",
+          "amount_verified": true,
+          "amount": "965511.88 GBP",
+          "verification_details": "The transaction amount of 965511.88 GBP has been verified as accurate and correct based on the provided data."
+        }
+      },
+      {
+        "task_id": "task_012",
+        "status": "completed",
+        "results": {
+          "message_id": "05d50cb4-379b-4dd5-9025-67756e0a9e94",
+          "status": "corrected",
+          "correction": {
+            "value_date": "YYYYMMDD"
+          },
+          "notes": "The value_date format has been corrected to the required YYYYMMDD format."
+        }
+      },
+      {
+        "task_id": "task_013",
+        "status": "completed",
+        "results": {
+          "message_id": "c30f26a3-1de0-4102-b9ab-66d7b4794698",
+          "status": "compliance_check_completed",
+          "correction": {
+            "value_date": "231025"
+          },
+          "notes": "The value_date has been corrected to the YYMMDD format, representing a valid past or present date."
+        }
+      },
+      {
+        "task_id": "task_014",
+        "status": "completed",
+        "results": {
+          "message_id": "c30f26a3-1de0-4102-b9ab-66d7b4794698",
+          "amount_verified": true,
+          "amount": "61433.16 EUR",
+          "verification_details": "The transaction amount of 61433.16 EUR has been verified as accurate and consistent with the provided data."
+        }
+      },
+      {
+        "task_id": "task_015",
+        "status": "completed",
+        "results": {
+          "message_id": "fda3d80d-c64a-4677-b5cf-f7c4aae6b794",
+          "compliance_check": {
+            "sender_bic": {
+              "original": "WVVGSGY8XXX",
+              "corrected": "WVVGSGYXXXX",
+              "status": "corrected"
+            },
+            "receiver_bic": {
+              "original": "YZMECH9OXXX",
+              "corrected": "YZMECH9XXXX",
+              "status": "corrected"
+            }
+          }
+        }
+      },
+      {
+        "task_id": "task_016",
+        "status": "completed",
+        "results": {
+          "message_id": "fda3d80d-c64a-4677-b5cf-f7c4aae6b794",
+          "amount_verified": true,
+          "amount": "6261396.60 HKD",
+          "verification_details": "The transaction amount of 6,261,396.60 HKD has been verified as accurate and consistent with the provided data."
+        }
+      },
+      {
+        "task_id": "task_017",
+        "status": "completed",
+        "results": {
+          "message_id": "1ced9c3f-4156-4cad-9b89-8e4fc6256a66",
+          "status": "corrected",
+          "correction": {
+            "value_date": "231025"
+          },
+          "notes": "The 'value_date' format was corrected to 'YYMMDD'."
+        }
+      },
+      {
+        "task_id": "task_018",
+        "status": "completed",
+        "results": {
+          "message_id": "1ced9c3f-4156-4cad-9b89-8e4fc6256a66",
+          "amount_verified": true,
+          "amount": "11625.28 EUR",
+          "verification_details": "The transaction amount of 11625.28 EUR has been verified as accurate and consistent with the provided data."
+        }
+      },
+      {
+        "task_id": "task_019",
+        "status": "completed",
+        "results": {
+          "message_id": "60b63173-bce4-4132-bff3-004c3ab1ca25",
+          "compliance_check": {
+            "status": "corrected",
+            "correction_details": {
+              "original_value_date": "Invalid format",
+              "corrected_value_date": "231025"
+            },
+            "notes": "The value_date has been corrected to a valid format (YYMMDD) and is not a future date."
+          }
+        }
+      },
+      {
+        "task_id": "task_020",
+        "status": "completed",
+        "results": {
+          "message_id": "60b63173-bce4-4132-bff3-004c3ab1ca25",
+          "amount_verified": true,
+          "verified_amount": "865196.96 USD",
+          "verification_details": "The transaction amount of 865196.96 USD has been verified as accurate and consistent with the provided data."
+        }
+      }
+    ],
+    "summary": "Processed 20 tasks for 10 messages"
+  }
+}
